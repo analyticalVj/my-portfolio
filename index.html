@@ -1,186 +1,1090 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vishal Jha | Business Analyst</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg-color: #fdfdfd;
-      --text-color: #333;
-      --header-bg: #2e3a59;
-      --header-text: white;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Jha - Business Analyst Portfolio</title>
+    <meta name="description" content="Professional Business Analyst Portfolio - Data Analytics & Business Intelligence Expert">
+    <meta name="author" content="Vishal Jha">
+    <meta name="keywords" content="business analyst, data analytics, business intelligence, analytics, portfolio, power bi, sql">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .dark-mode {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --header-bg: #1f2937;
-      --header-text: #ffffff;
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      transition: background-color 0.3s, color 0.3s;
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    header {
-      background-color: var(--header-bg);
-      color: var(--header-text);
-      padding: 40px 20px;
-      text-align: center;
-    }
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
 
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
+        .gradient-text {
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    section {
-      margin-bottom: 40px;
-    }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-    h2 {
-      color: var(--header-bg);
-      margin-bottom: 10px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
-    }
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            display: inline-block;
+        }
 
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
+        .btn-primary {
+            background: #4f46e5;
+            color: white;
+        }
 
-    .contact a {
-      display: block;
-      margin-bottom: 5px;
-      color: #1a73e8;
-      text-decoration: none;
-    }
+        .btn-primary:hover {
+            background: #3730a3;
+            transform: translateY(-2px);
+        }
 
-    .contact a:hover {
-      text-decoration: underline;
-    }
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
 
-    .toggle-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      padding: 8px 16px;
-      background-color: #1a73e8;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
+        .btn-outline:hover {
+            background: white;
+            color: #4f46e5;
+        }
 
-    .resume-button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background-color: #2e3a59;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-    }
+        .arrow-down {
+            margin-top: 3rem;
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+        }
 
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
 
-    form button {
-      padding: 10px 20px;
-      background-color: #2e3a59;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-  </style>
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .section-title p {
+            font-size: 1.125rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            background: #f9fafb;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .about-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            border-radius: 16px;
+            color: white;
+        }
+
+        .about-card h3 {
+            font-size: 1.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .highlights {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-icon {
+            font-size: 2rem;
+            min-width: 60px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .skills-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+        }
+
+        .skill-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-name {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .skill-percentage {
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+            border-radius: 4px;
+            transition: width 1s ease-out;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* Projects Section */
+        .projects {
+            background: #f9fafb;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .project-title h3 {
+            font-size: 1.25rem;
+            color: #1f2937;
+        }
+
+        .project-metrics {
+            margin-top: 1.5rem;
+        }
+
+        .project-metrics h4 {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #374151;
+        }
+
+        .metric-item, .achievement-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-dot, .achievement-dot {
+            width: 8px;
+            height: 8px;
+            background: #4f46e5;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .experience-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .experience-title {
+            font-size: 1.5rem;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-company {
+            font-size: 1.125rem;
+            color: #4f46e5;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .experience-period {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .achievements {
+            margin-top: 1.5rem;
+        }
+
+        .achievements h4 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #374151;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #1f2937;
+            color: white;
+        }
+
+        .contact .section-title h2,
+        .contact .section-title p {
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: #374151;
+            padding: 2rem;
+            border-radius: 16px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-form {
+            background: #374151;
+            padding: 2rem;
+            border-radius: 16px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #d1d5db;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #4b5563;
+            border-radius: 8px;
+            background: #1f2937;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4f46e5;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-
 <body>
-  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-
-  <header>
-    <h1>Vishal Jha</h1>
-    <p>Business Analyst</p>
-  </header>
-
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I am a Business Analyst with over three years of experience in data analysis,
-        decision-making support, and business process improvement. Skilled in data
-        storytelling and solving real business problems using tools like SQL, Excel,
-        Power BI, and Python. Passionate about turning raw data into actionable insights.
-      </p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="fade-in">
+                <h1>Business <span class="gradient-text">Analyst</span></h1>
+                <p>Experienced Business Analyst consultant with a demonstrated history of working in Sales, Operations, and Business Analytics in the education sector. Transforming data into actionable insights for strategic decision making.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="https://linkedin.com/in/vishal-jha-4112491a6" class="btn btn-outline" target="_blank">LinkedIn</a>
+                    <a href="mailto:vishaljha5454@gmail.com" class="btn btn-outline">Email</a>
+                    <a href="#contact" class="btn btn-outline">Contact</a>
+                </div>
+                <div class="arrow-down">↓</div>
+            </div>
+        </div>
     </section>
 
-    <section>
-      <h2>Top Skills</h2>
-      <ul>
-        <li>SQL</li>
-        <li>Spreadsheet (Excel, Google Sheets)</li>
-        <li>Power BI</li>
-        <li>Python (NumPy, Pandas)</li>
-        <li>Statistics and A/B Testing</li>
-      </ul>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Experienced Business Analyst consultant with a demonstrated history of working in Sales, Operations, and Business Analytics in the education sector. Skilled in problem-solving, program management, collaboration, and expertise in Data interpretation.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card fade-in">
+                    <h3>Vishal Jha</h3>
+                    <p style="margin-bottom: 1.5rem; opacity: 0.9;">Business Analyst with 1+ years of experience in the education sector. Specialized in data analytics, revenue collection, and student engagement analytics with proven track record of generating significant business value.</p>
+                    <div style="font-size: 0.875rem; line-height: 1.8;">
+                        <p><strong>Education:</strong> MBA in Marketing, B.A.</p>
+                        <p><strong>Location:</strong> Gurgaon, India</p>
+                        <p><strong>Languages:</strong> English, Hindi, Maithili</p>
+                        <p><strong>Email:</strong> vishaljha5454@gmail.com</p>
+                        <p><strong>Phone:</strong> +91 8210950249</p>
+                    </div>
+                </div>
+                <div class="highlights">
+                    <div class="highlight-item fade-in">
+                        <div class="highlight-icon">📈</div>
+                        <div>
+                            <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Revenue Generation</h4>
+                            <p style="color: #6b7280;">Generated 1 Cr+ deal value and collected 4 Cr+ revenue for organization</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item fade-in">
+                        <div class="highlight-icon">🎯</div>
+                        <div>
+                            <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Student Success</h4>
+                            <p style="color: #6b7280;">Successfully converted 35 students and retained 4600+ students</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item fade-in">
+                        <div class="highlight-icon">📊</div>
+                        <div>
+                            <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Data Analytics</h4>
+                            <p style="color: #6b7280;">Expert in Excel, Power BI, SQL, and dashboard creation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section>
-      <h2>Projects</h2>
-      <p>Coming soon...</p>
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Skills & Technologies</h2>
+                <p>Comprehensive toolkit for business analysis and data interpretation</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-card fade-in">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Advanced Excel</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Power BI</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">MySQL</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Data Analytics</span>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Dashboard Creation</span>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 92%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-card fade-in">
+                    <h3>Business Skills</h3>
+                    <div class="tags">
+                        <span class="tag">Stakeholder Management</span>
+                        <span class="tag">Sales & Marketing</span>
+                        <span class="tag">Project Management</span>
+                        <span class="tag">Team Work</span>
+                        <span class="tag">Leadership</span>
+                        <span class="tag">Problem Solving</span>
+                        <span class="tag">Program Management</span>
+                        <span class="tag">Collaboration</span>
+                        <span class="tag">Data Interpretation</span>
+                    </div>
+                </div>
+
+                <div class="skills-card fade-in">
+                    <h3>Certifications</h3>
+                    <div class="tags">
+                        <span class="tag" style="background: #f3e8ff; color: #7c3aed;">Advanced Excel Training - Internshala</span>
+                        <span class="tag" style="background: #f3e8ff; color: #7c3aed;">SQL for Data Analytics</span>
+                        <span class="tag" style="background: #f3e8ff; color: #7c3aed;">Excel Skills for Business Essentials</span>
+                        <span class="tag" style="background: #f3e8ff; color: #7c3aed;">KPMG Data Analytics Internship</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="contact">
-      <h2>Contact</h2>
-      <a href="mailto:Vishaljha5454@gmail.com">Vishaljha5454@gmail.com</a>
-      <a href="https://github.com/analyticalVj" target="_blank">GitHub: analyticalVj</a>
-      <a href="#">LinkedIn: Coming soon...</a>
-      <a class="resume-button" href="#" download>Download Resume</a>
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Projects</h2>
+                <p>Real-world business analysis projects that delivered measurable impact</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-title">
+                            <div style="color: #3b82f6; font-size: 2rem;">📊</div>
+                            <h3>Student Fees Collection Dashboard</h3>
+                        </div>
+                    </div>
+                    <p style="color: #6b7280; margin-bottom: 1.5rem;">Created comprehensive dashboard for analyzing student fees collection and campus reporting data. Supported central team in achieving organizational targets through data interpretation and insights.</p>
+                    <div>
+                        <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Technologies Used:</h4>
+                        <div class="tags" style="margin-bottom: 1rem;">
+                            <span class="tag">Excel</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Data Analysis</span>
+                        </div>
+                    </div>
+                    <div class="project-metrics">
+                        <h4>Key Results:</h4>
+                        <div class="metric-item">
+                            <div class="metric-dot"></div>
+                            <span>4 Cr+ revenue collection achieved</span>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-dot"></div>
+                            <span>4600+ students retained and reported</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-title">
+                            <div style="color: #9333ea; font-size: 2rem;">📱</div>
+                            <h3>Instagram User Analytics</h3>
+                        </div>
+                    </div>
+                    <p style="color: #6b7280; margin-bottom: 1.5rem;">Analyzed the process to track user engagement and interaction with digital products. Developed insights for improving user experience and engagement metrics.</p>
+                    <div>
+                        <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Technologies Used:</h4>
+                        <div class="tags" style="margin-bottom: 1rem;">
+                            <span class="tag">Data Analytics</span>
+                            <span class="tag">User Behavior Analysis</span>
+                            <span class="tag">Engagement Metrics</span>
+                        </div>
+                    </div>
+                    <div class="project-metrics">
+                        <h4>Key Results:</h4>
+                        <div class="metric-item">
+                            <div class="metric-dot"></div>
+                            <span>User engagement tracking system</span>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-dot"></div>
+                            <span>Digital product interaction insights</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-title">
+                            <div style="color: #10b981; font-size: 2rem;">⚽</div>
+                            <h3>Sports Analytics Using SQL</h3>
+                        </div>
+                    </div>
+                    <p style="color: #6b7280; margin-bottom: 1.5rem;">Comprehensive sports data analysis project using SQL to extract meaningful insights from sports statistics and performance data.</p>
+                    <div>
+                        <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Technologies Used:</h4>
+                        <div class="tags" style="margin-bottom: 1rem;">
+                            <span class="tag">SQL</span>
+                            <span class="tag">Database Analysis</span>
+                            <span class="tag">Statistical Analysis</span>
+                        </div>
+                    </div>
+                    <div class="project-metrics">
+                        <h4>Key Results:</h4>
+                        <div class="metric-item">
+                            <div class="metric-dot"></div>
+                            <span>Sports performance insights</span>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-dot"></div>
+                            <span>Statistical trend analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-title">
+                            <div style="color: #ef4444; font-size: 2rem;">🏢</div>
+                            <h3>KPMG Data Analytics Project</h3>
+                        </div>
+                    </div>
+                    <p style="color: #6b7280; margin-bottom: 1.5rem;">Analyzed data quality issues and provided recommendations. Gathered insights about potential customers by studying past behavior and implementing data analysis strategies.</p>
+                    <div>
+                        <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Technologies Used:</h4>
+                        <div class="tags" style="margin-bottom: 1rem;">
+                            <span class="tag">Excel</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Data Quality Analysis</span>
+                        </div>
+                    </div>
+                    <div class="project-metrics">
+                        <h4>Key Results:</h4>
+                        <div class="metric-item">
+                            <div class="metric-dot"></div>
+                            <span>Data quality improvement recommendations</span>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-dot"></div>
+                            <span>Customer behavior insights</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section>
-      <h2>Contact Form</h2>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Experience</h2>
+                <p>Progressive career growth in business analysis and data analytics</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="experience-item fade-in">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Associate Manager</h3>
+                            <div class="experience-company">🏢 Sunstone</div>
+                            <div style="color: #6b7280; font-size: 0.875rem;">📍 India</div>
+                        </div>
+                        <div class="experience-period">📅 Jan 2022 - Present</div>
+                    </div>
+                    <p style="color: #6b7280; margin-bottom: 1rem;">Lead business analyst responsible for revenue generation, student engagement analytics, and stakeholder collaboration across North Indian states.</p>
+                    <div class="achievements">
+                        <h4>Key Achievements:</h4>
+                        <div class="achievement-item">
+                            <div class="achievement-dot"></div>
+                            <span>Generated 1 Cr+ deal value by converting 35 students for UG & PG programs</span>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-dot"></div>
+                            <span>Collected 4 Cr+ revenue by reaching out to 4500+ students</span>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-dot"></div>
+                            <span>Achieved 84% retention rate (4600 out of 5500 students)</span>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-dot"></div>
+                            <span>Created dashboard for fees collection and campus reporting analytics</span>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-dot"></div>
+                            <span>Collaborated with Channel Partners across two North Indian States</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <h4 style="font-weight: 600; margin-bottom: 0.75rem;">Technologies:</h4>
+                        <div class="tags">
+                            <span class="tag">Excel</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Dashboard Creation</span>
+                            <span class="tag">Revenue Analytics</span>
+                        </div>
+                    </div>
+                </div>
 
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
+                <div class="experience-item fade-in">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Data Analytics Intern</h3>
+                            <div class="experience-company">🏢 KPMG</div>
+                            <div style="color: #6b7280; font-size: 0.875rem;">📍 Remote</div>
+                        </div>
+                        <div class="experience-period">📅 Jan 2021 - Feb 2021</div>
+                    </div>
+                    <p style="color: #6b7280; margin-bottom: 1rem;">Focused on data quality analysis and customer insights. Developed analytical solutions for business decision-making.</p>
+                    <div class="achievements">
+                        <h4>Key Achievements:</h4>
+                        <div class="achievement-item">
+                            <div class="achievement-dot"></div>
+                            <span>Analyzed data quality issues and provided improvement recommendations</span>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-dot"></div>
+                            <span>Gathered insights about potential customers through behavior analysis</span>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-dot"></div>
+                            <span>Created dashboards using Excel and Power BI</span>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-dot"></div>
+                            <span>Developed data analysis strategies for customer targeting</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <h4 style="font-weight: 600; margin-bottom: 0.75rem;">Technologies:</h4>
+                        <div class="tags">
+                            <span class="tag">Excel</span>
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Data Quality Analysis</span>
+                            <span class="tag">Customer Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item fade-in">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Placement Coordinator</h3>
+                            <div class="experience-company">🏢 University</div>
+                            <div style="color: #6b7280; font-size: 0.875rem;">📍 India</div>
+                        </div>
+                        <div class="experience-period">📅 Jan 2021 - Jul 2022</div>
+                    </div>
+                    <p style="color: #6b7280; margin-bottom: 1rem;">Led placement activities and coordinated between students and recruiting companies. Managed placement data and analytics.</p>
+                    <div class="achievements">
+                        <h4>Key Achievements:</h4>
+                        <div class="achievement-item">
+                            <div class="achievement-dot"></div>
+                            <span>Successfully coordinated placement activities for multiple batches</span>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-dot"></div>
+                            <span>Maintained placement records and generated reports</span>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-dot"></div>
+                            <span>Collaborated with recruiting companies and students</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <h4 style="font-weight: 600; margin-bottom: 0.75rem;">Skills:</h4>
+                        <div class="tags">
+                            <span class="tag">Leadership</span>
+                            <span class="tag">Coordination</span>
+                            <span class="tag">Data Management</span>
+                            <span class="tag">Reporting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Ready to collaborate on your next business analytics project? Let's discuss how I can help.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card fade-in">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Contact Information</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon" style="background: #dbeafe;">
+                                <div style="color: #3b82f6; font-size: 1.5rem;">✉️</div>
+                            </div>
+                            <div>
+                                <p style="font-weight: 500;">Email</p>
+                                <p style="color: #d1d5db;">vishaljha5454@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon" style="background: #dcfce7;">
+                                <div style="color: #10b981; font-size: 1.5rem;">📞</div>
+                            </div>
+                            <div>
+                                <p style="font-weight: 500;">Phone</p>
+                                <p style="color: #d1d5db;">+91 8210950249</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon" style="background: #f3e8ff;">
+                                <div style="color: #9333ea; font-size: 1.5rem;">📍</div>
+                            </div>
+                            <div>
+                                <p style="font-weight: 500;">Location</p>
+                                <p style="color: #d1d5db;">Gurgaon, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card fade-in">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Connect With Me</h3>
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                            <a href="https://linkedin.com/in/vishal-jha-4112491a6" class="btn btn-outline" style="flex: 1; text-align: center;" target="_blank">
+                                LinkedIn
+                            </a>
+                            <a href="mailto:vishaljha5454@gmail.com" class="btn btn-outline" style="flex: 1; text-align: center;">
+                                Email
+                            </a>
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="#" class="btn btn-primary" style="width: 100%; text-decoration: none;">
+                                📥 Download Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form fade-in">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Send Me a Message</h3>
+                    <form>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Doe">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="john.doe@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Business Analytics Discussion">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your business analytics needs..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0s';
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Progress bar animation
+        const animateProgressBars = () => {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        };
+
+        // Animate progress bars when skills section is in view
+        const skillsSection = document.querySelector('.skills');
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateProgressBars();
+                    skillsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        skillsObserver.observe(skillsSection);
+    </script>
 </body>
-
 </html>
