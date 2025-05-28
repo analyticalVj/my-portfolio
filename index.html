@@ -7,18 +7,33 @@
   <title>Vishal Jha | Business Analyst</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --bg-color: #fdfdfd;
+      --text-color: #333;
+      --header-bg: #2e3a59;
+      --header-text: white;
+    }
+
+    .dark-mode {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --header-bg: #1f2937;
+      --header-text: #ffffff;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fdfdfd;
-      color: #333;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     header {
-      background-color: #2e3a59;
-      color: white;
+      background-color: var(--header-bg);
+      color: var(--header-text);
       padding: 40px 20px;
       text-align: center;
     }
@@ -44,7 +59,7 @@
     }
 
     h2 {
-      color: #2e3a59;
+      color: var(--header-bg);
       margin-bottom: 10px;
       border-bottom: 2px solid #eee;
       padding-bottom: 5px;
@@ -65,10 +80,51 @@
     .contact a:hover {
       text-decoration: underline;
     }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 8px 16px;
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .resume-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #2e3a59;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background-color: #2e3a59;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
   </style>
 </head>
 
 <body>
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
   <header>
     <h1>Vishal Jha</h1>
     <p>Business Analyst</p>
@@ -106,9 +162,25 @@
       <a href="mailto:Vishaljha5454@gmail.com">Vishaljha5454@gmail.com</a>
       <a href="https://github.com/analyticalVj" target="_blank">GitHub: analyticalVj</a>
       <a href="#">LinkedIn: Coming soon...</a>
-      <a href="#">Download Resume (Coming soon)</a>
+      <a class="resume-button" href="#" download>Download Resume</a>
+    </section>
+
+    <section>
+      <h2>Contact Form</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </section>
   </main>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 
 </html>
